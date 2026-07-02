@@ -1,0 +1,19 @@
+[Unit]
+Description=Tidal Hi-Fi memory-leak watchdog
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/tidal-hifi-watchdog.sh
+Restart=on-failure
+RestartSec=5
+
+# --- Tunables (edit these, then: systemctl --user restart tidal-hifi-watchdog) ---
+Environment=MEM_LIMIT_MB=2000
+Environment=CHECK_INTERVAL=15
+Environment=WARN_SECONDS=30
+Environment=AUTO_RELAUNCH=false
+
+[Install]
+WantedBy=default.target
