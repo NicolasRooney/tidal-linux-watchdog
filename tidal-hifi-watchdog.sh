@@ -11,7 +11,7 @@ set -uo pipefail
 
 # ----- Configuration --------------------------------------------------------
 APP_ID="${APP_ID:-com.mastermindzh.tidal-hifi}"
-MEM_LIMIT_MB="${MEM_LIMIT_MB:-3000}"      # restart once memory crosses this
+MEM_LIMIT_MB="${MEM_LIMIT_MB:-2000}"      # restart once memory crosses this
 CHECK_INTERVAL="${CHECK_INTERVAL:-15}"    # seconds between memory checks
 WARN_SECONDS="${WARN_SECONDS:-30}"        # countdown length before restart
 AUTO_RELAUNCH="${AUTO_RELAUNCH:-false}"   # relaunch if app exits on its own
