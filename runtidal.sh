@@ -14,7 +14,7 @@ APP_ID="${APP_ID:-com.mastermindzh.tidal-hifi}"
 MEM_LIMIT_MB="${MEM_LIMIT_MB:-3000}"      # restart once memory crosses this
 CHECK_INTERVAL="${CHECK_INTERVAL:-15}"    # seconds between memory checks
 WARN_SECONDS="${WARN_SECONDS:-30}"        # countdown length before restart
-AUTO_RELAUNCH="${AUTO_RELAUNCH:-false}"   # relaunch if app exits on its own
+AUTO_RELAUNCH="${AUTO_RELAUNCH:-true}"   # relaunch if app exits on its own
 NOTIFY="${NOTIFY:-true}"                  # desktop notifications on/off
 
 NOTIFY_TAG="tidal-hifi-watchdog"
